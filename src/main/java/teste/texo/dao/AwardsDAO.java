@@ -6,7 +6,6 @@ import teste.texo.dto.ProducerDTO;
 
 import java.io.InputStream;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class AwardsDAO {
     private final List<AwardsDTO> awards = new ArrayList<>();
