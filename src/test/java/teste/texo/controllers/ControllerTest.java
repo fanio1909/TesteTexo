@@ -10,11 +10,11 @@ import spark.Spark;
 import java.util.Map;
 
 public class ControllerTest {
-    private final static String baseUrl = "http://localhost:8080/";
+    private final static String baseUrl = "http://localhost:9090/";
 
     @BeforeClass
     public static void setupSpark() {
-        Spark.port(8080);
+        Spark.port(9090);
         Spark.before((request, response) -> response.type("application/json"));
         Spark.defaultResponseTransformer(object -> new Gson().toJson(object));
     }
