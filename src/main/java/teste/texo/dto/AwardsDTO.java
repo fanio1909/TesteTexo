@@ -2,6 +2,7 @@ package teste.texo.dto;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AwardsDTO {
     private Integer year;
@@ -43,7 +44,9 @@ public class AwardsDTO {
     }
 
     public List<String> getProducersAsList() {
-        return (producers != null) ? Arrays.asList(producers.split(", ")) : null;
+        if (producers == null) return null;
+
+        return Arrays.stream(producers.split(", | and ")).map(String::trim).collect(Collectors.toList());
     }
 
     public String getWinner() {

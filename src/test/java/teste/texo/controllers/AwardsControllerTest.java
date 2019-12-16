@@ -24,7 +24,7 @@ public class AwardsControllerTest extends ControllerTest {
 
         assertNotNull(body.get("min"));
         assertTrue(body.get("min").getAsJsonArray().size() > 0);
-        assertEquals("Bo Derek", body.get("min").getAsJsonArray().get(0).getAsJsonObject().get("producer").getAsString());
+        assertEquals("Joel Silver", body.get("min").getAsJsonArray().get(0).getAsJsonObject().get("producer").getAsString());
 
         assertNotNull(body.get("max"));
         assertTrue(body.get("max").getAsJsonArray().size() > 0);
